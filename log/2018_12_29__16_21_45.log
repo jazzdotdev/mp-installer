@@ -1,0 +1,7 @@
+2018-12-29 16:21:50 ERROR: 	'/usr/bin/machu-pichu/' exists and is not an empty directory; class=Invalid (3); code=Exists (-4)
+stack traceback:
+	[C]: in field 'clone'
+	init.lua:10: in local 'init_f'
+	[string "?"]:15: in function <[string "?"]:11>
+	[C]: in function 'xpcall'
+	[string "?"]:11: in main chunk

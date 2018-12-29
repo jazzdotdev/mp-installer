@@ -1,0 +1,6 @@
+2018-12-29 16:19:26 ERROR: 	[string "?"]:13: init.lua:16: ')' expected near 'cmd_path'
+stack traceback:
+	[C]: in function 'error'
+	[string "?"]:13: in function <[string "?"]:11>
+	[C]: in function 'xpcall'
+	[string "?"]:11: in main chunk

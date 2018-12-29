@@ -1,0 +1,4 @@
+general = {
+  git_url = "https://github.com/foundpatterns/machu-picchu.git",
+  install_directory = "/usr/bin/",
+}

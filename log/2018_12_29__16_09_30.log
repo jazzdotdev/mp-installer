@@ -1,0 +1,7 @@
+2018-12-29 16:09:30 ERROR: 	failed to make directory '/usr/bin/machu-pichu': Permission denied; class=Os (2)
+stack traceback:
+	[C]: in field 'clone'
+	init.lua:6: in local 'init_f'
+	[string "?"]:15: in function <[string "?"]:11>
+	[C]: in function 'xpcall'
+	[string "?"]:11: in main chunk
