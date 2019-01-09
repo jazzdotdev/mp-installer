@@ -1,5 +1,13 @@
 #!/usr/bin/env torchbear
 
+function fetch(mp_dir)
+	if torchbear.os == "android" then
+		os.execute("git clone " .. torchbear.settings.git_url .. " " .. mp_dir)
+	else
+		git.clone( torchbear.settings.git_url, mp_dir )
+	end
+end
+
 local bin_dir = torchbear.settings.install_directory
 local mp_dir = bin_dir .. "machu-picchu/"
 
@@ -16,7 +24,8 @@ if fs.is_dir(mp_dir) then
 	fs.remove_dir(mp_dir, true)
 end
 
-git.clone( torchbear.settings.git_url, mp_dir )
+fetch(mp_dir)
+
 if torchbear.os == "windows" then
 	fs.copy_file("mp.bat", bin_dir)
 else
