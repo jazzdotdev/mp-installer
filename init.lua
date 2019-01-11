@@ -1,10 +1,14 @@
 #!/usr/bin/env torchbear
 
 function fetch(mp_dir)
+	fs_extras_url = "https://github.com/foundpatterns/fs-extras-lua"
+	dependency_dir = mp_dir .. "third-party/"
 	if torchbear.os == "android" then
 		os.execute("git clone " .. torchbear.settings.git_url .. " " .. mp_dir)
+		os.execute("git clone " .. fs_extras_url .. " " .. dependency_dir)
 	else
 		git.clone( torchbear.settings.git_url, mp_dir )
+		git.clone(fs_extras_url, dependency_dir)
 	end
 end
 
